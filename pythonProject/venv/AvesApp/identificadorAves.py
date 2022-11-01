@@ -158,7 +158,7 @@ with col1:
     st.subheader('_Situación geográfica:_')
     st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/BaixoMiño.png')
     # Recorremos el fichero .ods con pd.read_excel.
-    df = pd.read_excel('.pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
+    df = pd.read_excel('.pythonProject/venv/AvesApp/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
 
     # Implementamos una excepción porque al cargar la página daba un NameError que al inicializar los filtros
     # como cadenas vacías ya no da. No obstante lo dejamos.
