@@ -156,9 +156,9 @@ col1, col2 = st.columns([1, 1], gap="large")
 with col1:
     # Situamos a los usuarios geográficamente mediante la imagen de un mapa con los concellos que forman O Baixo Miño.
     st.subheader('_Situación geográfica:_')
-    st.image('./Archivos/FotosDef/BaixoMiño.png')
+    st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/BaixoMiño.png')
     # Recorremos el fichero .ods con pd.read_excel.
-    df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
+    df = pd.read_excel('.pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:L')
 
     # Implementamos una excepción porque al cargar la página daba un NameError que al inicializar los filtros
     # como cadenas vacías ya no da. No obstante lo dejamos.
@@ -182,7 +182,7 @@ with col1:
     # cada filtro
     dfFichas = df.filter(items=['Ficha'])
     for valor in dfFichas.values.tolist():
-        mifichero = open('./Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
+        mifichero = open('./pythonProject/venv/AvesApp/Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
         texto = mifichero.read()
         mifichero.close()
         # Si no hay nada seleccionado no se muestra ninguna ficha y en caso contrario se muestran las
@@ -229,4 +229,4 @@ with col2:
             pass
         else:
             st.subheader('_Foto:_')
-            st.image('./Archivos/FotosDef/' + valor[0] + '.png')
+            st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
