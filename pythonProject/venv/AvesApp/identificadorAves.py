@@ -206,7 +206,7 @@ with col2:
     st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
     st.write("**_3. Ve eligiendo el filtro que más te convenga._**")
     st.write("**_4. El orden de elección de los filtros no es importante._**")
-    st.write("**_5. Si con los filtros elegidos no encuentras tu ave, puedes limpiar los filros y volver a empezar._**")
+    st.write("**_5. Si con los filtros elegidos no encuentras tu ave, puedes limpiar los filtros y volver a empezar._**")
     st.write("**_6. Comienza cuando quieras._**")
 
     # Filtramos el dataframe por la columna Foto con los sucesivos filtros
