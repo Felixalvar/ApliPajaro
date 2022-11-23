@@ -154,6 +154,7 @@ with st.sidebar:
                                                   'Ostrero',
                                                   'Paloma Torcaz',
                                                   'Papamoscas Cerrojillo',
+                                                  'Pardillo Común'
                                                   'Perdiz Común',
                                                   'Petirrojo',
                                                   'Pico de Coral',
