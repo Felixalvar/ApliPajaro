@@ -201,9 +201,9 @@ with st.sidebar:
                                                     'Cultivos',
                                                     'Herbazales',
                                                     'Humedales',
-                                                    'Llanuras',
-                                                    'Urbanos',
+                                                    'Llanuras',                                                    
                                                     'Ribera',
+                                                    'Urbanos',
                                                     ])
 
     if st.checkbox("Comportamiento"):
