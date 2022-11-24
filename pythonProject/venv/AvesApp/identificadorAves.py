@@ -334,7 +334,7 @@ with col1:
     # Filtramos el dataframe por la columna UrlCantos con los sucesivos filtros
     dfUrlCantos = df.filter(items=['UrlCanto'])
     for valor in dfUrlCantos.values.tolist():
-        miarchivo = open('./pythonProject/venv/Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
+        miarchivo = open('./pythonProject/venv/AvesApp/Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
         contenido = miarchivo.read()
         miarchivo.close()
         if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
@@ -343,7 +343,7 @@ with col1:
         else:
             st.write('**_______________________________________________________**')
             #st.write('_Foto:_')
-            st.image('./Archivos/FotosDef/' + valor[0] + '.png')
+            st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
             st.caption(contenido)
 
     dfImagen = df.filter(items=['Foto'])
@@ -368,8 +368,8 @@ with col2:
     # cada filtro
     dfFichas = df.filter(items=['Ficha'])
     for valor in dfFichas.values.tolist():
-        mifichero = open('./Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
-        # mifichero = open('./pythonProject/venv/AvesApp/Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
+        # mifichero = open('./Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
+        mifichero = open('./pythonProject/venv/AvesApp/Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
         texto = mifichero.read()
         mifichero.close()
         # Si no hay nada seleccionado no se muestra ninguna ficha y en caso contrario se muestran las
@@ -381,7 +381,7 @@ with col2:
             #st.write('_Ficha:_')
             st.write('**_______________________________________________________**')
             st.caption(texto)
-            st.audio('./Archivos/Cantos/' + valor[0] + '.mp3')
+            st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
 
     # Filtramos el dataframe por la columna Canto en los sucesivos filtros
     dfAudio = df.filter(items=['Canto'])
