@@ -309,8 +309,8 @@ col1, col2 = st.columns([1, 1], gap="large")
 with col1:
 
     # Recorremos el fichero .ods con pd.read_excel.
-    df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
-    # df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:M')
+    # df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
+    df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:M')
 
     # Implementamos una excepción porque al cargar la página daba un NameError que al inicializar los filtros
     # como cadenas vacías ya no da. No obstante lo dejamos.
@@ -334,7 +334,7 @@ with col1:
     # Filtramos el dataframe por la columna UrlCantos con los sucesivos filtros
     dfUrlCantos = df.filter(items=['UrlCanto'])
     for valor in dfUrlCantos.values.tolist():
-        miarchivo = open('./Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
+        miarchivo = open('./pythonProject/venv/Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
         contenido = miarchivo.read()
         miarchivo.close()
         if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
