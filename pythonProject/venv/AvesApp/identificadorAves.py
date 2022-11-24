@@ -310,7 +310,7 @@ with col1:
 
     # Recorremos el fichero .ods con pd.read_excel.
     # df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
-    df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:M')
+    df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
 
     # Implementamos una excepción porque al cargar la página daba un NameError que al inicializar los filtros
     # como cadenas vacías ya no da. No obstante lo dejamos.
