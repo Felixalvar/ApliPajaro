@@ -11,9 +11,9 @@ import pandas as pd
 
 # A la pestaña de la página le damos un título, un icono y modificamos el diseño del área de la página ensanchándola
 st.set_page_config(
-    page_title='Baixominhoaves'
-    #page_icon='🪶',
-    #page_icon=':owl:',
+    page_title='Buscador de Aves do Baixo Miño',
+    # page_icon='🪶',
+    page_icon=':owl:',
     layout='wide',
 )
 
