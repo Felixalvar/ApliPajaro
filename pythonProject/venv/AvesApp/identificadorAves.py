@@ -344,6 +344,7 @@ with col1:
             st.write('**_______________________________________________________**')
             #st.write('_Foto:_')
             st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
+            st.write('_Canto_')
             st.caption(contenido)
 
     dfImagen = df.filter(items=['Foto'])
@@ -381,13 +382,13 @@ with col2:
             #st.write('_Ficha:_')
             st.write('**_______________________________________________________**')
             st.caption(texto)
-            st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
+            #st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
 
     # Filtramos el dataframe por la columna Canto en los sucesivos filtros
-    dfAudio = df.filter(items=['Canto'])
-    for valor in dfAudio.values.tolist():
+    #dfAudio = df.filter(items=['Canto'])
+    #for valor in dfAudio.values.tolist():
         # Si no hay nada seleccionado no se muestra ningun audio y en caso contrario se muestran los audios de las
         # aves seleccionadas
-        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
-                picoGrorsor == picoLongitud == "":
-            pass
+        #if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+                #picoGrorsor == picoLongitud == "":
+            #pass
