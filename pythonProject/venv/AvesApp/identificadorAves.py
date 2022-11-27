@@ -344,8 +344,7 @@ with col1:
             st.write('**_______________________________________________________**')
             #st.write('_Foto:_')
             st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
-            st.write('_Canto_')
-            st.caption(contenido)
+            st.caption(f'_Canto_: {contenido}')
 
     dfImagen = df.filter(items=['Foto'])
     # Convertimos el dfImagen en una lista que recorremos con for para mostrar las fotos de las aves seleccionadas con
