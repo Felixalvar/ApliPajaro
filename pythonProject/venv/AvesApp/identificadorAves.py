@@ -344,7 +344,7 @@ with col1:
             st.write('**_______________________________________________________**')
             #st.write('_Foto:_')
             st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
-            st.write('_Canto_')
+            st.caption('_Canto:_')
             st.caption(contenido)
 
     dfImagen = df.filter(items=['Foto'])
