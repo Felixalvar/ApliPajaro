@@ -13,7 +13,7 @@ import pandas as pd
 st.set_page_config(
     page_title='Baixominhoaves'
     #page_icon='🪶',
-    page_icon=':owl:',
+    #page_icon=':owl:',
     layout='wide',
 )
 
