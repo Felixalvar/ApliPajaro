@@ -295,17 +295,6 @@ with st.sidebar:
                                     'Largo',
                                     ])
 
-# Pomemos el título
-# st.title("_Buscador De Aves Do Baixo Miño_")
-
-# Dividimos la página en dos columnas iguales
-#col1, col2 = st.columns([1, 1], gap="large")
-# Podemos hacerla de igual tamaño de esta otra forma:
-# col1, col2 = st.columns(2)
-
-# En la columna de la izquierda mostraremos la/s foto/s del/de las ave/s filtrada/s, e informaremos como usar el
-# buscador.
-#with col1:
 
 # Recorremos el fichero .ods con pd.read_excel.
 # df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
@@ -395,7 +384,19 @@ for valor in dfUrlCantos.values.tolist():
     
     
     
-# Otra distribución diferente: La primera que utilicé.     
+# Otra distribución diferente: La primera que utilicé. 
+# Pomemos el título
+# st.title("_Buscador De Aves Do Baixo Miño_")
+
+# Dividimos la página en dos columnas iguales
+#col1, col2 = st.columns([1, 1], gap="large")
+# Podemos hacerla de igual tamaño de esta otra forma:
+# col1, col2 = st.columns(2)
+
+# En la columna de la izquierda mostraremos la/s foto/s del/de las ave/s filtrada/s, e informaremos como usar el
+# buscador.
+#with col1:
+
     # Filtramos el dataframe por la columna UrlCantos con los sucesivos filtros
     #dfUrlCantos = df.filter(items=['UrlCanto'])
     #for valor in dfUrlCantos.values.tolist():
