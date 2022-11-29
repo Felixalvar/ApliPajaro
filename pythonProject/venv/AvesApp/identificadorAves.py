@@ -299,95 +299,161 @@ with st.sidebar:
 # st.title("_Buscador De Aves Do Baixo Miño_")
 
 # Dividimos la página en dos columnas iguales
-col1, col2 = st.columns([1, 1], gap="large")
+#col1, col2 = st.columns([1, 1], gap="large")
 # Podemos hacerla de igual tamaño de esta otra forma:
 # col1, col2 = st.columns(2)
 
 # En la columna de la izquierda mostraremos la/s foto/s del/de las ave/s filtrada/s, e informaremos como usar el
 # buscador.
-with col1:
+#with col1:
 
-    # Recorremos el fichero .ods con pd.read_excel.
-    # df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
-    df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
+# Recorremos el fichero .ods con pd.read_excel.
+# df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
+df = pd.read_excel('./pythonProject/venv/AvesApp/Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
 
-    # Implementamos una excepción porque al cargar la página daba un NameError que al inicializar los filtros
-    # como cadenas vacías ya no da. No obstante lo dejamos.
-    try:
-        # Vamos filtrando por cada etiqueta recogiendo la selección anterior
-        df = df[df['Ave'].str.contains(nombreAve, case=False)]
-        df = df[df['Tamaño'].str.contains(tamanoAve, case=False)]
-        df = df[df['Hábitat'].str.contains(habitatAve, case=False)]
-        df = df[df['Comportamiento'].str.contains(comportamientoAve, case=False)]
-        df = df[df['Color'].str.contains(colorAve, case=False)]
-        df = df[df['Patas color'].str.contains(patasColor, case=False)]
-        df = df[df['Pico color'].str.contains(picoColor, case=False)]
-        df = df[df['Pico forma'].str.contains(picoForma, case=False)]
-        df = df[df['Pico grosor'].str.contains(picoGrorsor, case=False)]
-        df = df[df['Pico longitud'].str.contains(picoLongitud, case=False)]
+# Implementamos una excepción porque al cargar la página daba un NameError que al inicializar los filtros
+# como cadenas vacías ya no da. No obstante lo dejamos.
+try:
+# Vamos filtrando por cada etiqueta recogiendo la selección anterior
+    df = df[df['Ave'].str.contains(nombreAve, case=False)]
+    df = df[df['Tamaño'].str.contains(tamanoAve, case=False)]
+    df = df[df['Hábitat'].str.contains(habitatAve, case=False)]
+    df = df[df['Comportamiento'].str.contains(comportamientoAve, case=False)]
+    df = df[df['Color'].str.contains(colorAve, case=False)]
+    df = df[df['Patas color'].str.contains(patasColor, case=False)]
+    df = df[df['Pico color'].str.contains(picoColor, case=False)]
+    df = df[df['Pico forma'].str.contains(picoForma, case=False)]
+    df = df[df['Pico grosor'].str.contains(picoGrorsor, case=False)]
+    df = df[df['Pico longitud'].str.contains(picoLongitud, case=False)]
 
-    except NameError:
-        # Damos información al usuario
-        st.write("Para iniciar la identificación hay que elegir algún filtro")
+except NameError:
+# Damos información al usuario
+    st.write("Para iniciar la identificación hay que elegir algún filtro")
+# Convertimos el dfFichas en una lista dentro de un archivo que recorremos con for para mostrar las fichas de las aves
+# seleccionadas con cada filtro
 
+dfFichas = df.filter(items=['Ficha'])
+for valor in dfFichas.values.tolist():
+    mifichero = open('./pythonProject/venv/AvesApp/Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
+    texto = mifichero.read()
+    mifichero.close()
+    if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+            picoGrorsor == picoLongitud == "":
+        pass
+    else:
+        st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
+        st.caption(texto)
+        st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
+        st.write(
+            '**_______________________________________________________________________________________________________________________**')
+
+# Filtramos el dataframe por la columna Foto en los sucesivos filtros creando una lista
+dfImagen = df.filter(items=['Foto'])
+# Recorremos la lista dfImagen, si no hay nada seleccionado continuamos y si aparece algo lo mostramos en la línea 333
+# para seguir un orden más visual
+for valor in dfImagen.values.tolist():
+    if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+            picoGrorsor == picoLongitud == "":
+        pass
+
+# Filtramos el dataframe por la columna Canto en los sucesivos filtros creando una lista
+dfAudio = df.filter(items=['Canto'])
+# Cuando no aparecen audios indicamos que hay que volver a seleccionar filtros nuevamente
+if dfAudio.empty:
+    st.write("_Con los filtros seleccionados no hay ningún ave en la base de datos._"
+             " _Inténtalo de nuevo._")
+    # Paramos la aplicación para que no aparezca la información de 'Archivos de audios:'
+    st.stop()
+
+# Recorremos la lista dfAudio, si no hay nada seleccionado continuamos y si aparece algo lo mostramos en la línea 335
+# para seguir un orden  más visual
+for valor in dfAudio.values.tolist():
+    if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+            picoGrorsor == picoLongitud == "":
+        pass
+
+# Convertimos el dfUrlCantos en una lista dentro de un archivo que recorremos con for para mostrar las fichas de las aves
+# seleccionadas con cada filtro
+dfUrlCantos = df.filter(items=['UrlCanto'])
+if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+            picoGrorsor == picoLongitud == "":
+    pass
+else:
+    st.write('Archivos de audios:')
+for valor in dfUrlCantos.values.tolist():
+    miarchivo = open('./pythonProject/venv/AvesApp/Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
+    contenido = miarchivo.read()
+    miarchivo.close()
+    # Recorremos la lista dfImagen, si no hay nada seleccionado continuamos y si aparece algo lo mostramos
+    if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+            picoGrorsor == picoLongitud == "":
+        pass
+    else:
+        st.caption(contenido)
+    
+    
+    
+    
+    
+# Otra distribución diferente: La primera que utilicé.     
     # Filtramos el dataframe por la columna UrlCantos con los sucesivos filtros
-    dfUrlCantos = df.filter(items=['UrlCanto'])
-    for valor in dfUrlCantos.values.tolist():
-        miarchivo = open('./pythonProject/venv/AvesApp/Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
-        contenido = miarchivo.read()
-        miarchivo.close()
-        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
-                picoGrorsor == picoLongitud == "":
-            pass
-        else:
-            st.write('**_______________________________________________________**')
+    #dfUrlCantos = df.filter(items=['UrlCanto'])
+    #for valor in dfUrlCantos.values.tolist():
+        #miarchivo = open('./pythonProject/venv/AvesApp/Archivos/UrlCantos/' + valor[0], 'r', encoding='utf-8')
+        #contenido = miarchivo.read()
+        #miarchivo.close()
+        #if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+                #picoGrorsor == picoLongitud == "":
+            #pass
+        #else:
+            #st.write('**_______________________________________________________**')
             #st.write('_Foto:_')
-            st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
+            #st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
             #st.caption('_Canto:_')
-            st.caption(contenido)
+            #st.caption(contenido)
 
-    dfImagen = df.filter(items=['Foto'])
+    #dfImagen = df.filter(items=['Foto'])
     # Convertimos el dfImagen en una lista que recorremos con for para mostrar las fotos de las aves seleccionadas con
     # cada filtro.
-    for valor in dfImagen.values.tolist():
+    #for valor in dfImagen.values.tolist():
         # Si no hay nada seleccionado no se muestra ninguna foto y en caso contrario se muestran las fotos de las
         # aves seleccionadas
-        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
-                picoGrorsor == picoLongitud == "":
-            pass
+        #if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+                #picoGrorsor == picoLongitud == "":
+            #pass
 
     # Sin no hay ningún ave seleccionada se le indica al usuario que con esos filtros no se localiza ningún ave
-    if dfImagen.empty:
-        st.write("_Con los filtros seleccionados no hay ningún ave en la base de datos._"
-                 " _Inténtalo de nuevo._")
+    #if dfImagen.empty:
+        #st.write("_Con los filtros seleccionados no hay ningún ave en la base de datos._"
+                 #" _Inténtalo de nuevo._")
 
 # Damos contenido a la columna de la derecha donde irán las fichas de las aves seleccionadas.
-with col2:
+#with col2:
 
     # Convertimos el dfFichas en una lista que recorremos con for para mostrar las fichas de las aves seleccionadas con
     # cada filtro
-    dfFichas = df.filter(items=['Ficha'])
-    for valor in dfFichas.values.tolist():
+    #dfFichas = df.filter(items=['Ficha'])
+    #for valor in dfFichas.values.tolist():
         # mifichero = open('./Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
-        mifichero = open('./pythonProject/venv/AvesApp/Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
-        texto = mifichero.read()
-        mifichero.close()
+        #mifichero = open('./pythonProject/venv/AvesApp/Archivos/Fichas/' + valor[0], 'r', encoding='utf-8')
+        #texto = mifichero.read()
+        #mifichero.close()
         # Si no hay nada seleccionado no se muestra ninguna ficha y en caso contrario se muestran las
         # fichas de las aves seleccionadas
-        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
-                picoGrorsor == picoLongitud == "":
-            pass
-        else:
+        #if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+                #picoGrorsor == picoLongitud == "":
+            #pass
+        #else:
             #st.write('_Ficha:_')
-            st.write('**_______________________________________________________**')
-            st.caption(texto)
-            st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
+            #st.write('**_______________________________________________________**')
+            #st.caption(texto)
+            #st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
 
     # Filtramos el dataframe por la columna Canto en los sucesivos filtros
-    dfAudio = df.filter(items=['Canto'])
-    for valor in dfAudio.values.tolist():
+    #dfAudio = df.filter(items=['Canto'])
+    #for valor in dfAudio.values.tolist():
         # Si no hay nada seleccionado no se muestra ningun audio y en caso contrario se muestran los audios de las
         # aves seleccionadas
-        if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
-                picoGrorsor == picoLongitud == "":
-            pass
+        #if nombreAve == tamanoAve == habitatAve == comportamientoAve == colorAve == patasColor == picoColor == picoForma == \
+                #picoGrorsor == picoLongitud == "":
+            #pass
