@@ -234,7 +234,6 @@ with st.sidebar:
                             'Marrón',
                             'Naranja',
                             'Negro',
-                            'Pío: blanco y negro',
                             'Rojo',
                             'Verde',
                             ])
