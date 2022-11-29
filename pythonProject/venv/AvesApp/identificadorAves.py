@@ -332,7 +332,7 @@ for valor in dfFichas.values.tolist():
     else:
         st.image('./pythonProject/venv/AvesApp/Archivos/FotosDef/' + valor[0] + '.png')
         st.caption(texto)
-        st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3')
+        st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3', format='audio/mp3')
         st.write(
             '**_______________________________________________________________________________________________________________________**')
 
