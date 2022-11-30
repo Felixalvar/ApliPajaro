@@ -24,7 +24,7 @@ st.caption(
     **Espacio declarado Red Natura 2000 y** 
     **Zona de Especial Protección para las Aves (ZEPA)**.
     https://es.wikipedia.org/wiki/Red_Natura_2000  
-    **Baixo Miño**.
+    **Comarca do Baixo Miño**.
     https://gl.wikipedia.org/wiki/Comarca_do_Baixo_Mi%C3%B1o
 """
 )
