@@ -38,7 +38,7 @@ with st.sidebar:
     st.subheader('_Uso del buscador:_')
     st.write("**_Si sabes el ave, pincha en la casilla de verificación 'Ave', más abajo, y búscala en "
              "el desplegable._**")
-    st.write("**_Si no la sabes, sigue las instruciones:_**")
+    st.write("**_Si no la sabes, sigue las instrucciones:_**")
     st.write(
         "**_1. Para iniciar la identificación elige algún filtro, pincha en la flecha "
         "del cuadro de selección y busca una opción._**")
