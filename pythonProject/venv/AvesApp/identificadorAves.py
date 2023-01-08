@@ -244,6 +244,7 @@ with st.sidebar:
                                   'Amarillo',
                                   'Azul',
                                   'Blanco',
+                                  'Crema',
                                   'Gris',
                                   'Marrón',
                                   'Naranja',
