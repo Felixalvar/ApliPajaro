@@ -15,7 +15,7 @@ st.set_page_config(
     page_icon='random'
     #page_icon=':bird:',
     #page_icon=':owl:',
-    layout='wide',
+    layout='wide'
 )
 
 # Pomemos el título
