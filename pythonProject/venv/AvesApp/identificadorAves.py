@@ -346,7 +346,7 @@ for valor in dfFichas.values.tolist():
         st.caption(texto)
         st.audio('./pythonProject/venv/AvesApp/Archivos/Cantos/' + valor[0] + '.mp3', format='audio/mpeg')
         st.write(
-            '**_______________________________________________________________________________________________________________________**')
+            '**________________________________________________________________________________________________________________**')
 
 # Filtramos el dataframe por la columna Foto en los sucesivos filtros creando una lista
 dfImagen = df.filter(items=['Foto'])
