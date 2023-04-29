@@ -85,6 +85,7 @@ with st.sidebar:
                                                   'Archibebe Claro',
                                                   'Arrendajo',
                                                   'Avión Común',
+                                                  'Avión Roquero',
                                                   'Azor',
                                                   'Bisbita Común',
                                                   'Buitrón',
