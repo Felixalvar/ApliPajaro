@@ -68,7 +68,7 @@ with st.sidebar:
     # que si el usuario conoce el ave pueda elegirla e ir directamente a la ficha y foto de esa ave.
     # En caso contrario creamos los checkbox de cada filtro de búsqueda en la barra lateral con sus opciones correspondientes y la
     # primera vacía.
-    if st.checkbox('Ave:'):
+    if st.checkbox("Ave"):
         nombreAve = st.selectbox('Elige un ave', ['',
                                                   'Abubilla',
                                                   'Acentor Común',
@@ -191,7 +191,7 @@ with st.sidebar:
                                                   'Zorzal Común',
                                                   ])
 
-    if st.checkbox('Tamaño:'):
+    if st.checkbox("Tamaño"):
         tamanoAve = st.selectbox('Elige tamaño', ['',
                                                   'Más pequeño que un gorrión',
                                                   'Como un gorrión',
@@ -204,7 +204,7 @@ with st.sidebar:
                                                   'Más grande que un pato',
                                                   ])
 
-    if st.checkbox('Hábitat'):
+    if st.checkbox("Hábitat"):
         habitatAve = st.selectbox('Elige hábitat', ['',
                                                     'Arbustos',
                                                     'Bosque/Árboles',
