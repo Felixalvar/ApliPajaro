@@ -53,16 +53,16 @@ with st.sidebar:
     st.subheader('Filtros:')
     # Creamos un botón para borrar la selección de filtros de una sola vez
     if st.button("Limpiar Filtros"):
-        st.checkbox('Ave:', value=False, key=1)
-        st.checkbox('Tamaño:', value=False, key=2)
-        st.checkbox('Hábitat:', value=False, key=3)
-        st.checkbox('Comportamiento:', value=False, key=4)
-        st.checkbox('Color:', value=False, key=5)
-        st.checkbox('Patas color:', value=False, key=6)
-        st.checkbox('Pico color:', value=False, key=7)
-        st.checkbox('Pico forma:', value=False, key=8)
-        st.checkbox('Pico grosor:', value=False, key=9)
-        st.checkbox('Pico longitud:', value=False, key=10)
+        st.checkbox('Ave', value=False, key=1)
+        st.checkbox('Tamaño', value=False, key=2)
+        st.checkbox('Hábitat', value=False, key=3)
+        st.checkbox('Comportamiento', value=False, key=4)
+        st.checkbox('Color', value=False, key=5)
+        st.checkbox('Patas color', value=False, key=6)
+        st.checkbox('Pico color', value=False, key=7)
+        st.checkbox('Pico forma', value=False, key=8)
+        st.checkbox('Pico grosor', value=False, key=9)
+        st.checkbox('Pico longitud', value=False, key=10)
         st.stop()
     # Creamos las casillas de verificación y sus opciones correspondientes. La primera opoción son todas las aves para
     # que si el usuario conoce el ave pueda elegirla e ir directamente a la ficha y foto de esa ave.
