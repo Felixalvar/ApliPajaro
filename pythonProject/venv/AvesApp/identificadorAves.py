@@ -271,7 +271,6 @@ with st.sidebar:
             'Elige color pico', ['',
                                  'Amarillo',
                                  'Blanco',
-                                 'Crema',
                                  'Gris',
                                  'Marrón',
                                  'Naranja',
