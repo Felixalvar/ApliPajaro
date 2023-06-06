@@ -70,6 +70,7 @@ with st.sidebar:
     # primera vacía.
     if st.checkbox("Ave"):
         nombreAve = st.selectbox('Elige un ave', ['',
+                                                  'Abejero Europeo',
                                                   'Abubilla',
                                                   'Acentor Común',
                                                   'Agachadiza Chica',
@@ -143,7 +144,6 @@ with st.sidebar:
                                                   'Gorrión Común Hembra',
                                                   'Gorrión Común Macho',
                                                   'Gorrión Molinero',
-                                                  'Halcón Abejero',
                                                   'Halcón Común',
                                                   'Herrerillo Capuchino',
                                                   'Herrerillo Común',
