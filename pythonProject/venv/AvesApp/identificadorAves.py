@@ -92,6 +92,7 @@ with st.sidebar:
                                                   'Buitrón',
                                                   'Camachuelo Común Hembra',
                                                   'Camachuelo Común Macho',
+                                                  'Cárabo Común',
                                                   'Carbonero Común',
                                                   'Carbonero Garrapinos',
                                                   'Carricerín Cejudo',
