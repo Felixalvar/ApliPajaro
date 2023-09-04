@@ -107,6 +107,7 @@ with st.sidebar:
                                                   'Cigüeña Blanca',
                                                   'Colirrojo Tizón Hembra',
                                                   'Colirrojo Tizón Macho',
+                                                  'Collalba Isabel',
                                                   'Cormorán Grande',
                                                   'Cormorán Moñudo',
                                                   'Corneja Negra',
