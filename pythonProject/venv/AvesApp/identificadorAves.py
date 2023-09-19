@@ -96,7 +96,7 @@ with st.sidebar:
                                                   'Cárabo Común',
                                                   'Carbonero Común',
                                                   'Carbonero Garrapinos',
-                                                  'Carricerín Cejudo',
+                                                  # 'Carricerín Cejudo',
                                                   'Cernícalo Vulgar',
                                                   'Charrán Común',
                                                   'Charrán Patinegro',
@@ -193,7 +193,7 @@ with st.sidebar:
                                                   'Verderón',
                                                   'Vuelvepiedras',
                                                   'Zarapito Trinador',
-                                                  'Zarcero Común',
+                                                  'Zarcero Común-Políglota',
                                                   'Zorzal Común',
                                                   ])
 
