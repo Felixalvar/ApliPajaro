@@ -38,7 +38,7 @@ nombreAve = tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor =
 with st.sidebar:
     # Informamos de los pasos a seguir
     st.subheader('_Uso del buscador:_')
-    st.write("**_Si sabes el ave, pincha en la casilla de verificación 'Ave', más abajo, y búscala en "
+    st.write("**_Si sabes el ave, pincha en la casilla de verificación 'Ave' más abajo, y búscala en "
              "el desplegable._**")
     st.write("**_Si no la sabes, sigue las instrucciones:_**")
     st.write(
