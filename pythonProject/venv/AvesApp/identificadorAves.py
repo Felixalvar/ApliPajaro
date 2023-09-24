@@ -46,9 +46,9 @@ with st.sidebar:
         "del cuadro de selección y busca una opción._**")
     st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
     st.write("**_3. Ve eligiendo el filtro que más te convenga._**")
-    st.write("**_4. El orden de elección de los filtros no es importante._**")
+    # st.write("**_4. El orden de elección de los filtros no es importante._**")
     st.write(
-        "**_5. Si con los filtros elegidos no encuentras tu ave, limpia los filtros y vuelve a empezar._**")
+        "**_4. Si con los filtros elegidos no encuentras tu ave, limpia los filtros y vuelve a empezar._**")
     st.caption("_____________________")
     # Creamos la etiqueta subtítulo 'Filtro'
     st.subheader('Filtros:')
