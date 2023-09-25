@@ -312,6 +312,7 @@ with st.sidebar:
                                     'Medio',
                                     'Largo',
                                     ])
+    st.caption('''**© Félix Álvarez**''')    
 
 
 # Recorremos el fichero .ods con pd.read_excel.
