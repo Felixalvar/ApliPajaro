@@ -66,7 +66,7 @@ with st.sidebar:
         st.checkbox('Pico longitud', value=False, key=10)
         st.stop()
     # Creamos las casillas de verificación y sus opciones correspondientes. La primera opoción son todas las aves para
-    # que si el usuario conoce el ave pueda elegirla e ir directamente a la ficha y foto de esa ave.
+    # que si el usuario conoce el ave pueda elegirla e ir directamente a la ficha, foto y canto de esa ave.
     # En caso contrario creamos los checkbox de cada filtro de búsqueda en la barra lateral con sus opciones correspondientes y la
     # primera vacía.
     if st.checkbox("Ave"):
@@ -312,8 +312,7 @@ with st.sidebar:
                                     'Medio',
                                     'Largo',
                                     ])
-    st.caption('''**© Félix Álvarez**''')    
-
+    st.caption("""© Félix Álvarez""")    
 
 # Recorremos el fichero .ods con pd.read_excel.
 # df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
