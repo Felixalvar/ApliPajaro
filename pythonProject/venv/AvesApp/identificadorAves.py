@@ -41,7 +41,8 @@ with st.sidebar:
     st.write(
         """
         **_Si sabes el ave, pincha en la casilla de verificación 'Ave' más abajo y búscala en 
-             el desplegable. Si no la sabes, sigue las instrucciones:_**
+             el desplegable. 
+             Si no la sabes, sigue las instrucciones:_**
              """
     )
     # st.write("**_Si no la sabes, sigue las instrucciones:_**")
