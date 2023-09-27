@@ -312,7 +312,7 @@ with st.sidebar:
                                     'Medio',
                                     'Largo',
                                     ])
-    st.caption("""© Félix Álvarez""")    
+    st.caption("""© felixalvar""")    
 
 # Recorremos el fichero .ods con pd.read_excel.
 # df = pd.read_excel('./Archivos/FichaAvesDefinitiva.ods', engine='odf', usecols='A:N')
