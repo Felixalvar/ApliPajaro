@@ -211,9 +211,11 @@ with st.sidebar:
 
     if st.checkbox("Hábitat"):
         habitatAve = st.selectbox('Elige hábitat', ['',
+                                                    'Acantilados',
+                                                    'Árboles',
                                                     'Arbustos',
-                                                    'Bosque/Árboles',
-                                                    'Cortados/Acantilados',
+                                                    'Bosque',
+                                                    'Cortados',
                                                     'Costa',
                                                     'Cultivos',
                                                     'Herbazales',
