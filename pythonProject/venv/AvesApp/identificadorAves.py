@@ -225,7 +225,7 @@ with st.sidebar:
 
     if st.checkbox("Comportamiento"):
         comportamientoAve = st.selectbox('Elige comportamiento', ['',
-                                                                  'Buceando/Nadando',
+                                                                  'Buceando',
                                                                   'Caminando',
                                                                   'Cazando',
                                                                   'Cerniéndose',
@@ -234,11 +234,13 @@ with st.sidebar:
                                                                   'Hurgando en el limo',
                                                                   'Inmóvil',
                                                                   'Moviendo la cola',
+                                                                  'Nadando',
                                                                   'Pescando',
                                                                   'Picoteando en el suelo',
+                                                                  'Planeando',
                                                                   'Posado en un oteadero',
                                                                   'Saltando',
-                                                                  'Volando/Planeando',
+                                                                  'Volando',
                                                                   ])
 
     if st.checkbox("Color"):
