@@ -95,6 +95,7 @@ with st.sidebar:
                                                   'Cárabo Común',
                                                   'Carbonero Común',
                                                   'Carbonero Garrapinos',
+                                                  'Carricero Común',
                                                   # 'Carricerín Cejudo',
                                                   'Cernícalo Vulgar',
                                                   'Charrán Común',
