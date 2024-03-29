@@ -180,6 +180,8 @@ with st.sidebar:
                                                   'Pinzón Vulgar Macho',
                                                   'Pito Real',
                                                   'Polla de Agua',
+                                                  'Porrón Europeo Hembra',
+                                                  'Porrón Europeo Macho',
                                                   'Ratonero Común',
                                                   'Reyezuelo Listado',
                                                   'Reyezuelo Sencillo',
