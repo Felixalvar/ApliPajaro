@@ -42,16 +42,16 @@ nombreAve = tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor =
 with st.sidebar:
     # Informamos de los pasos a seguir
     st.subheader('_Uso del buscador:_')
-    st.write("""**_Si sabes el ave, pincha en la casilla de verificación 'Ave' más abajo y búscala en 
+    st.write("""**_Si sabes el ave, pincha en la casilla de verificación 'Ave' más abajo, y búscala en 
              el desplegable. Si no la sabes, sigue las instrucciones:_**""")
     # st.write("**_Si no la sabes, sigue las instrucciones:_**")
     st.write("**_1. Para iniciar la identificación elige algún filtro, pincha en la flecha "
         "del cuadro de selección y busca una opción._**")
-    st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
-    st.write("**_3. Ve eligiendo el filtro que más te convenga._**")
+    # st.write("**_2. Con cada filtro elegido vamos cribando el número de aves._**")
+    st.write("**_2. Ve eligiendo el filtro que más te convenga._**")
     # st.write("**_4. El orden de elección de los filtros no es importante._**")
     st.write(
-        "**_4. Si con los filtros elegidos no encuentras tu ave, limpia los filtros y vuelve a empezar._**")
+        "**_3. Si con los filtros elegidos no encuentras tu ave, limpia los filtros y vuelve a empezar._**")
     st.caption("_____________________")
     # Creamos la etiqueta subtítulo 'Filtro'
     st.subheader('Filtros:')
