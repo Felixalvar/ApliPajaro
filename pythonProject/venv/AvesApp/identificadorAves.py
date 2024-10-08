@@ -249,6 +249,7 @@ with st.sidebar:
                                                                   # 'Planeando',
                                                                   'Posado en un oteadero',
                                                                   'Saltando',
+                                                                  'Trepando',
                                                                   'Volando',
                                                                   ])
 
