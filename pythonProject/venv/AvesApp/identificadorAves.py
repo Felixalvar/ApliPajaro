@@ -12,10 +12,10 @@ import pandas as pd
 # A la pestaña de la página le damos un título, un icono y modificamos el diseño del área de la página ensanchándola
 st.set_page_config(
     page_title='Baixominhoaves',
-    # page_icon=':random:',
+    page_icon=':random:',
     # page_icon=':bird:',
     # page_icon=':dove_of_peace:',
-    page_icon=':owl:',
+    # page_icon=':owl:',
     layout='wide',
 )
 
