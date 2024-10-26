@@ -80,6 +80,7 @@ with st.sidebar:
                                                   'Agachadiza Chica',
                                                   'Agachadiza Común',
                                                   'Agateador Común',
+                                                  'Águila Calzada',
                                                   'Águila Pescadora',
                                                   'Aguilucho Lagunero Hembra',
                                                   'Aguilucho Lagunero Macho',
