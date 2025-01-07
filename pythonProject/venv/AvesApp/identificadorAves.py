@@ -34,6 +34,8 @@ st.caption(
     https://gl.wikipedia.org/wiki/Zona_especial_de_conservaci%C3%B3n_do_Baixo_Mi%C3%B1o
     """
 )
+st.write(
+            '**_______________________________________________________________________________________________________________________**')
 # Inicializamos todos los filtros de la barra lateral con una cadena vacía para que al iniciar la aplicación no dé
 # ningún error.
 nombreAve = tamanoAve = habitatAve = comportamientoAve = colorAve = patasColor = picoColor = picoForma = picoGrorsor = \
